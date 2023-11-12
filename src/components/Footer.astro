@@ -1,0 +1,51 @@
+<footer>
+    <div class="col">
+        <h2>Horario de atención</h2>
+         Lunes - Sábado: 8:00am - 5:00pm
+    </div>
+    <div class="col-like">
+        <div>
+            <h2>¿Nos dejarías un like?</h2>
+             Pulsa aquí para dejar tu like
+        </div>
+        <img src="/icons/hearth.svg" />
+    </div>
+</footer>
+
+<style>
+    footer {
+        width: 100%;
+        height: fit-content;
+        background-color: #0a3143;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: white;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px;
+    }
+
+    .col-like {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        padding: 80px;
+        position: relative;
+    }
+
+    .col-like img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: -20px;
+        bottom: 60px;
+    }
+</style>

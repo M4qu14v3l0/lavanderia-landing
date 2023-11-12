@@ -1,0 +1,48 @@
+---
+const listCards = [
+    { icon: "/icons/coins.svg", tittle: "A base de monedas" },
+    { icon: "/icons/bottle.svg", tittle: "Usa productos de calidad" },
+    { icon: "/icons/internet.svg", tittle: "Tenemos zona coworking" },
+];
+---
+
+<section class="info-section">
+    {
+        listCards.map((card) => (
+            <div class="card-container">
+                <img src={card.icon} />
+                <h2>{card.tittle}</h2>
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    .info-section {
+        padding: 0px 100px;
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card-container {
+        width: 280px;
+        height: 260px;
+        box-shadow: 0px 4px 48px 0px #00000040;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 40px;
+        color: #276e90;
+        padding: 50px;
+    }
+
+    .card-container img {
+        width: 160px;
+        height: 100px;
+    }
+</style>

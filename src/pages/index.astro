@@ -1,16 +1,51 @@
 ---
-
+import Hero from "../components/Hero.astro";
+import Info from "../components/Info.astro";
+import MeetUs from "../components/MeetUs.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<nav>
+		<div>
+			<h2>LavaTodo</h2>
+			<ul>
+				<a href="/servicios"><li>¿Cómo funciona?</li></a>
+				<a href="#"><li>Contáctanos</li></a>
+			</ul>
+		</div>
+	</nav>
+	<Hero />
+	<Info />
+	<MeetUs />
+</Layout>
+
+<style>
+	nav {
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	nav div {
+		padding: 0px 100px;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+		font-size: 20px;
+	}
+
+	nav div ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: white;
+	}
+</style>
