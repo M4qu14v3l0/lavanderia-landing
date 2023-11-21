@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <nav>
+        <div>
+            <a href="/"><h2>LavaTodo</h2></a>
+            <ul>
+                <a href="/servicios"><li>¿Cómo funciona?</li></a>
+                <a href="/contacto"><li>Contáctanos</li></a>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="form-container">
+            <h2>Contáctanos</h2>
+            <form>
+                <div>
+                    <input type="text" placeholder="Nombres" />
+                    <input type="text" placeholder="Apellidos" />
+                </div>
+                <textarea placeholder="¿Cuál es tu consulta?"></textarea>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    nav div {
+        padding: 0px 100px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-size: 20px;
+    }
+
+    nav div ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .contact-section {
+        height: 100vh;
+        background-image: url("/pictures/banner_contact.svg");
+        background-repeat: no-repeat;
+    }
+
+    .form-container {
+        text-align: center;
+        padding-top: 160px;
+    }
+
+    .form-container h2 {
+        font-size: 80px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .form-container form {
+        background-color: white;
+        width: 80%;
+        margin: 0px auto;
+        height: 700px;
+        border-radius: 20px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .form-container form > div {
+        display: flex;
+        gap: 20px;
+        margin: 0px auto;
+    }
+
+    .form-container form input {
+        width: clamp(100px, 30vw, 600px);
+        height: clamp(20px, 30vw, 90px);
+        font-size: 18px;
+        padding-left: 50px;
+        background-color: #efefef;
+        border-radius: 50px;
+        color: #276e90;
+        border: none;
+    }
+
+    form input::placeholder {
+        color: #276e90;
+    }
+
+    form textarea::placeholder {
+        color: #276e90;
+    }
+
+    .form-container form textarea {
+        width: clamp(200px, 62vw, 1200px);
+        margin: 0px auto;
+        font-size: 18px;
+        padding-top: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 260px;
+        background-color: #efefef;
+        border-radius: 50px;
+        color: #276e90;
+        border: none;
+        resize: none;
+    }
+
+    button {
+        background-color: #276e90;
+        height: 90px;
+        width: 440px;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 28px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+</style>

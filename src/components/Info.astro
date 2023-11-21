@@ -1,8 +1,23 @@
 ---
 const listCards = [
-    { icon: "/icons/coins.svg", tittle: "A base de monedas" },
-    { icon: "/icons/bottle.svg", tittle: "Usa productos de calidad" },
-    { icon: "/icons/internet.svg", tittle: "Tenemos zona coworking" },
+    {
+        icon: "/icons/coins.svg",
+        tittle: "A base de monedas",
+        description:
+            "Deja que nuestra lavadora calcule la cantidad justa que debes pagar.",
+    },
+    {
+        icon: "/icons/bottle.svg",
+        tittle: "Usa productos de calidad",
+        description:
+            "Puedes usar nuestros detergentes y suavizantes de mejor calidad.",
+    },
+    {
+        icon: "/icons/internet.svg",
+        tittle: "Tenemos zona coworking",
+        description:
+            "Mientras esperas, ¡no perderás el tiempo! Usa nuestra zona de coworking.",
+    },
 ];
 ---
 
@@ -12,6 +27,7 @@ const listCards = [
             <div class="card-container">
                 <img src={card.icon} />
                 <h2>{card.tittle}</h2>
+                <p>{card.description}</p>
             </div>
         ))
     }
@@ -29,7 +45,7 @@ const listCards = [
 
     .card-container {
         width: 280px;
-        height: 260px;
+        height: 375px;
         box-shadow: 0px 4px 48px 0px #00000040;
         display: flex;
         flex-direction: column;
@@ -41,8 +57,13 @@ const listCards = [
         padding: 50px;
     }
 
+    .card-container h2 {
+        font-weight: 400;
+    }
+
     .card-container img {
         width: 160px;
-        height: 100px;
+        height: 150px;
+        margin-bottom: 40px;
     }
 </style>
